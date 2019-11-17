@@ -1,9 +1,9 @@
 export interface Campaign {
-  campaignDescription: string;
+  description: string;
   value: number;
   type: string;
-  numberOfCoupons: number;
-  merchantName: string;
-  createdDate: string;
-  expireDate: string;
+  noOfCoupons: number;
+  merchant: {};
+  creationDate: Date;
+  expiryDate: Date;
 }

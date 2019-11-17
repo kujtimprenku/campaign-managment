@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  apiUrl: 'http://coupon-svc-test.eu-west-1.elasticbeanstalk.com/api/v1/',
   production: false
 };
 

@@ -1,4 +1,4 @@
-<div>
+<div class="campaign-list-container">
   <table>
     <thead>
     <tr>
@@ -8,21 +8,19 @@
       <th>Number Of Coupons</th>
       <th>Merchant Name</th>
       <th>Creation Date</th>
-      <th>Creation Date</th>
       <th>Expiry Date</th>
     </tr>
 
     </thead>
     <tbody>
     <tr *ngFor="let campaign of campaigns; let i = index;">
-      <td>{{}}</td>
-      <td>{{}}</td>
-      <td>{{}}</td>
-      <td>{{}}</td>
-      <td>{{}}</td>
-      <td>{{}}</td>
-      <td>{{}}</td>
-      <td>{{}}</td>
+      <td>{{campaign.description}}</td>
+      <td>{{campaign.value}}</td>
+      <td>{{campaign.type}}</td>
+      <td>{{campaign.noOfCoupons}}</td>
+      <td>{{campaign.merchant['name']}}</td>
+      <td>{{campaign.creationDate | date}}</td>
+      <td>{{campaign.expiryDate | date}}</td>
     </tr>
     </tbody>
 
