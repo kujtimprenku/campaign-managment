@@ -1,0 +1,26 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  padding: 10px;
+  background: #f0f4f5;
+  align-items: center;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #b1aeae;
+}
+
+.logo {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: black;
+  padding: 0 10px;
+}
+
+.active {
+  color: #38c1f5;
+}
+

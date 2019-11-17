@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {CampaignListComponent} from './campaign-list/campaign-list.component';
 
 const routes: Routes = [
-  {path: 'campaigns', component: CampaignListComponent}
+  {path: '', component: CampaignListComponent},
+  // {path: 'create', component}
 ];
 
 @NgModule({

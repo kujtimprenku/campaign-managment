@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { CampaignListComponent } from './campaign-list/campaign-list.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ConvertLengthToArray} from './pipes/convert-length-to-array.pipe';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CampaignListComponent,
-    ConvertLengthToArray
+    ConvertLengthToArray,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
