@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Campaign} from '../models/campaign.model';
 import {CampaignService} from '../services/campaign.service';
 
@@ -10,18 +10,30 @@ import {CampaignService} from '../services/campaign.service';
 export class CampaignListComponent implements OnInit {
 
   campaigns: Campaign[];
+  totalPagesArray: number[];
+  totalPages;
+  limit = 3;
+  currentPage = 1;
 
-  constructor(private campaignService: CampaignService) { }
+  // pageSizeOptions = [1, 2, 5, 10];
 
-  ngOnInit() {
-    this.getCampaigns();
+  constructor(private campaignService: CampaignService) {
   }
 
-  getCampaigns() {
-    this.campaignService.getCampaigns(1, 10).subscribe((response: {status, message, payload}) => {
+  ngOnInit() {
+    this.getCampaigns(this.currentPage);
+  }
+
+  getCampaigns(currentPage: number) {
+    this.currentPage = currentPage;
+    this.campaignService.getCampaigns(this.currentPage, this.limit).subscribe((response: { status, message, payload }) => {
       this.campaigns = response.payload.data;
-      console.log(this.campaigns);
+      this.totalPages = response.payload.totalElements / this.limit;
     });
   }
 
+  onPageChange(pageNumber: number) {
+    this.currentPage = pageNumber;
+    this.getCampaigns(this.currentPage);
+  }
 }

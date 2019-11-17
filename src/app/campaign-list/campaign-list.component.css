@@ -18,3 +18,27 @@ td, th {
 tr:nth-child(even) {
   background-color: #dddddd;
 }
+
+.campaign-pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination li {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+
+.active {
+  background: #38c1f5;
+  color: white!important;
+
+}

@@ -25,4 +25,12 @@
     </tbody>
 
   </table>
+  <div class="campaign-pagination">
+      <ul class="pagination">
+        <li class="page-item" *ngFor="let page  of  totalPages | convertToArray; let i = index">
+          <a [ngClass]="{'active': currentPage==i+1}"
+            (click)="onPageChange(i+1)" class="page-link">{{i+1}}</a>
+        </li>
+      </ul>
+  </div>
 </div>
