@@ -1,0 +1,28 @@
+.campaign-form-container {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.submit-button {
+  background-color: #38c1f5;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 10px 15px;
+}
+
+.error {
+  background-color: #f10707c9;
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 600;
+}

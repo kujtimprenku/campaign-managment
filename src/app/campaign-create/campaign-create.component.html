@@ -1,1 +1,50 @@
-<p>campaign-create works!</p>
+<div class="campaign-form-container">
+  <div>
+    <h3>Create Campaign</h3>
+  </div>
+  <form [formGroup]="createCampaignForm" >
+
+    <label for="description">Description</label>
+    <input type="text" id="description" formControlName="description">
+    <p *ngIf="createCampaignForm.get('description').hasError('required') && !createCampaignForm.get('description').pristine" class="error">
+      Please add description
+    </p>
+
+    <label for="value">Value</label>
+    <input type="number" id="value" formControlName="value">
+    <p *ngIf="createCampaignForm.get('value').hasError('required') && !createCampaignForm.get('value').pristine" class="error">
+      Please add value
+    </p>
+
+    <label for="type">Type</label>
+    <input type="text" id="type" formControlName="type">
+    <p *ngIf="createCampaignForm.get('type').hasError('required') && !createCampaignForm.get('type').pristine" class="error">
+      Please add type
+    </p>
+
+    <label for="noOfCoupons">Number of Coupons</label>
+    <input type="text" id="noOfCoupons" formControlName="noOfCoupons">
+    <p *ngIf="createCampaignForm.get('noOfCoupons').hasError('required') && !createCampaignForm.get('noOfCoupons').pristine" class="error">
+      Please add number of coupons
+    </p>
+
+    <label for="creationDate">Creation Date</label>
+    <input type="date" id="creationDate" formControlName="creationDate">
+    <p *ngIf="createCampaignForm.get('creationDate').hasError('required') && !createCampaignForm.get('creationDate').pristine" class="error">
+      Please add creation date.
+    </p>
+
+    <label for="expiryDate">Expiry Date</label>
+    <input type="date" id="expiryDate" formControlName="expiryDate">
+
+    <p *ngIf="createCampaignForm.get('expiryDate').hasError('required') && !createCampaignForm.get('expiryDate').pristine" class="error">
+      Please add expiry date.
+    </p>
+
+    <p *ngIf="createCampaignForm.invalid && isSubmited" class="error">
+      All form fields are required.
+    </p>
+  </form>
+  <button
+    class="submit-button" type="submit" (click)="createCampaign()">Create Campaign</button>
+</div>
