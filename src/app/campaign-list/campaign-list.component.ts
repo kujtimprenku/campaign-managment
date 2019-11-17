@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Campaign} from '../models/campaign.model';
 
 @Component({
   selector: 'app-campaign-list',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./campaign-list.component.css']
 })
 export class CampaignListComponent implements OnInit {
+
+  campaign: Campaign[];
 
   constructor() { }
 
