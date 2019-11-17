@@ -37,3 +37,12 @@ tr:nth-child(even) {
   color: white!important;
 
 }
+
+.delete-button {
+  background-color: red;
+  border: none;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 2px;
+  cursor: pointer;
+}

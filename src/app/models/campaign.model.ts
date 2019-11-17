@@ -1,4 +1,5 @@
 export interface Campaign {
+  id: string;
   description: string;
   value: number;
   type: string;

@@ -13,4 +13,8 @@ export class CampaignService {
   getCampaigns(pageNumber: number, limit: number) {
     return this.http.get(this.apiUrl + 'couponCampaign?page=' + pageNumber + '&limit=' + limit);
   }
+
+  deleteCampaign(id: string) {
+    return this.http.delete(this.apiUrl + 'couponCampaign/' + id);
+  }
 }

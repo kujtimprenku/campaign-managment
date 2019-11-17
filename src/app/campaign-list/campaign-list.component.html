@@ -9,6 +9,7 @@
       <th>Merchant Name</th>
       <th>Creation Date</th>
       <th>Expiry Date</th>
+      <th></th>
     </tr>
 
     </thead>
@@ -21,6 +22,9 @@
       <td>{{campaign.merchant['name']}}</td>
       <td>{{campaign.creationDate | date}}</td>
       <td>{{campaign.expiryDate | date}}</td>
+      <td>
+        <button class="delete-button" (click)="onDeleteCampaign(campaign)">Delete</button>
+      </td>
     </tr>
     </tbody>
 

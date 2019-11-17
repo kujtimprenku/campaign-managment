@@ -10,12 +10,9 @@ import {CampaignService} from '../services/campaign.service';
 export class CampaignListComponent implements OnInit {
 
   campaigns: Campaign[];
-  totalPagesArray: number[];
   totalPages;
   limit = 3;
   currentPage = 1;
-
-  // pageSizeOptions = [1, 2, 5, 10];
 
   constructor(private campaignService: CampaignService) {
   }
@@ -35,5 +32,13 @@ export class CampaignListComponent implements OnInit {
   onPageChange(pageNumber: number) {
     this.currentPage = pageNumber;
     this.getCampaigns(this.currentPage);
+  }
+
+  onDeleteCampaign(campaign: Campaign) {
+    if (confirm('Are you sure to delete ' + campaign.description)) {
+      this.campaignService.deleteCampaign(campaign.id).subscribe(() => {
+
+      });
+    }
   }
 }
